@@ -1,0 +1,19 @@
+name: "Deploy Documentation"
+description: "Deploy documentation to GitHub Pages for a Pixi and nbdev project."
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v4
+    - uses: prefix-dev/setup-pixi
+      with:
+        activate-environment: true
+    - name: Build the documentation
+      shell: bash
+      run: |
+        nbdev_docs
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_docs
