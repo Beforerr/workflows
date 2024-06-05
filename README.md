@@ -15,3 +15,5 @@ This repository stores Github Actions useful for my projects:
 - [fastai/workflows: Composite Actions workflows for use in fastai projects](https://github.com/fastai/workflows)
 
 - [quarto-dev/quarto-actions](https://github.com/quarto-dev/quarto-actions)
+
+- [Allow reusable workflows to be located at arbitrary locations and be local · community · Discussion #9050](https://github.com/orgs/community/discussions/9050)
