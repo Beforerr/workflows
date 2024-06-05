@@ -2,7 +2,8 @@
 
 This repository stores Github Actions useful for my projects:
 
-- [Beforerr/workflows/pixi_nbdev](./pixi_nbdev/action.yml) - Deploy documentation to GitHub Pages for a Pixi and nbdev project.
+- [Beforerr/workflows/pixi_nbdev/workflow.yml@main](./pixi_nbdev/workflow.yml) - Deploy documentation to GitHub Pages for a Pixi and nbdev project.
+  - [Beforerr/workflows/pixi_nbdev](./pixi_nbdev/action.yml) #action
 - [Beforerr/workflows/nbdev_test](./nbdev_test/action.yml) - Test a nbdev project.
 
 ## References
