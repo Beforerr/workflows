@@ -1,0 +1,26 @@
+name: "Deploy Documentation"
+
+on:
+  workflow_call:
+    secrets: # Defines the secrets that can be passed from the caller workflow
+      GITHUB_TOKEN:
+
+jobs:
+  deploy:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          activate-environment: true
+      - name: Build the documentation
+        shell: bash
+        run: |
+          nbdev_docs
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_docs
